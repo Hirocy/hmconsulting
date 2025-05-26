@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "H&M Consulting - 新規事業開発のビジネスコンサルティング",
-  description: "改新規事業開発の壁を共に乗り越える。戦略策定から実行支援まで、新規事業開発の全プロセスをサポートします。",
+  description: "新規事業開発の壁を共に乗り越える。戦略策定から実行支援まで、新規事業開発の全プロセスをサポートします。",
   keywords:
     "新規事業開発, ビジネスコンサルティング, 事業戦略, 組織の壁, リソースの壁, スキルの壁, 新規事業立ち上げ, 事業計画策定",
     generator: 'v0.dev'
