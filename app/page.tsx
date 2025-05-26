@@ -321,7 +321,7 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                    新規事業開発(改)の<span className="text-primary">壁</span>を<br />
+                    新規事業開発の<span className="text-primary">壁</span>を<br />
                     共に乗り越える
                   </h1>
                   <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
