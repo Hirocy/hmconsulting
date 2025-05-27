@@ -25,20 +25,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-
-# Windowsシステム関連の不要ディレクトリを除外
-AppData/
-Application Data/
-Cookies/
-Documents/My Music/
-Documents/My Pictures/
-Documents/My Videos/
-Local Settings/
-My Documents/
-NetHood/
-PrintHood/
-Recent/
-SendTo/
-Templates/
-スタート メニュー/

@@ -26,12 +26,12 @@ import {
   CheckCircle,
   ChevronLeft,
   Info,
-  Globe,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
 export default function Home() {
   const achievementsRef = useRef<HTMLDivElement>(null)
@@ -281,14 +281,6 @@ export default function Home() {
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Button
-              variant="outline"
-              size="sm"
-              className="rounded-full border-primary text-primary hover:bg-primary hover:text-white"
-            >
-              <Globe className="h-4 w-4 mr-1" />
-              EN
-            </Button>
             <Link href="#contact" className="hidden md:block">
               <Button className="rounded-full">お問い合わせ（無料）</Button>
             </Link>
@@ -319,8 +311,8 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
               <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                <div className="space-y-2 px-4 md:px-0">
+                  <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl/none">
                     新規事業開発の<span className="text-primary">壁</span>を<br />
                     共に乗り越える
                   </h1>
@@ -330,7 +322,7 @@ export default function Home() {
                     私と共に、その壁を乗り越え、新たな成長を実現しませんか？
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-2 min-[400px]:flex-row px-4 md:px-0">
                   <Link href="#contact">
                     <Button
                       variant="outline"
@@ -358,7 +350,9 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">このような課題がありませんか？</h1>
+                <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
+                  このような課題がありませんか？
+                </h1>
                 <div className="h-1 w-20 bg-primary mx-auto mt-2 mb-6"></div>
                 <p className="text-gray-500 mt-2">10年以上の経験で当方が経験してきた担当者の実体験です。</p>
               </div>
@@ -369,8 +363,8 @@ export default function Home() {
                 <CardContent className="p-8">
                   <div className="space-y-6">
                     <div className="flex items-start">
-                      <div className="flex-shrink-0 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary mr-4">
-                        <Strategy className="h-8 w-8" />
+                      <div className="flex-shrink-0 flex h-10 w-10 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-primary/10 text-primary mr-4">
+                        <Strategy className="h-5 w-5 sm:h-8 sm:w-8" />
                       </div>
                       <div>
                         <h4 className="text-xl font-bold mb-2">
@@ -383,8 +377,8 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-start">
-                      <div className="flex-shrink-0 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary mr-4">
-                        <Users className="h-8 w-8" />
+                      <div className="flex-shrink-0 flex h-10 w-10 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-primary/10 text-primary mr-4">
+                        <Users className="h-5 w-5 sm:h-8 sm:w-8" />
                       </div>
                       <div>
                         <h4 className="text-xl font-bold mb-2">新規事業開発を実践したことのある経験者がいない</h4>
@@ -395,8 +389,8 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-start">
-                      <div className="flex-shrink-0 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary mr-4">
-                        <BarChart3 className="h-8 w-8" />
+                      <div className="flex-shrink-0 flex h-10 w-10 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-primary/10 text-primary mr-4">
+                        <BarChart3 className="h-5 w-5 sm:h-8 sm:w-8" />
                       </div>
                       <div>
                         <h4 className="text-xl font-bold mb-2">
@@ -418,7 +412,9 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">事業開発を阻む「3つの障壁」</h2>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
+                  事業開発を阻む「3つの障壁」
+                </h2>
                 <div className="h-1 w-20 bg-primary mx-auto mt-2 mb-6"></div>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   多くの企業が新規事業開発において直面する共通の課題。これらを社外のリソースを活用し、乗り越えることが成功への鍵です。
@@ -436,7 +432,7 @@ export default function Home() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-500 mb-4">
+                  <p className="text-sm text-gray-500 mb-4 font-bold">
                     縦割り構造と意思決定の遅延。官僚的な組織文化や複雑な承認プロセスが、革新的なアイデアの実現を阻害していませんか？
                   </p>
                   <ul className="space-y-2 text-xs text-gray-500">
@@ -458,7 +454,7 @@ export default function Home() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-500 mb-4">
+                  <p className="text-sm text-gray-500 mb-4 font-bold">
                     限られた資源と優先順位。既存事業とのバランスを取りながら、新規事業にリソースを割り当てるのは困難な課題です。
                   </p>
                   <ul className="space-y-2 text-xs text-gray-500">
@@ -480,7 +476,7 @@ export default function Home() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-500 mb-4">
+                  <p className="text-sm text-gray-500 mb-4 font-bold">
                     変化への対応と人材育成。新規事業の成功には、既存のスキルセットに加えて、変化への対応力や起業家精神が不可欠です。
                   </p>
                   <ul className="space-y-2 text-xs text-gray-500">
@@ -500,7 +496,9 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">新規事業開発を成功に導くサービス</h2>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
+                  新規事業開発を成功に導くサービス
+                </h2>
                 <div className="h-1 w-20 bg-primary mx-auto mt-2 mb-6"></div>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   戦略策定から実行支援まで、新規事業開発の全プロセスをサポートします。
@@ -652,7 +650,9 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">他者との違い・サービスの特徴</h2>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
+                  他者との違い・サービスの特徴
+                </h2>
                 <div className="h-1 w-20 bg-primary mx-auto mt-2 mb-6"></div>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   事業開発10年以上の実務経験により、事業売却経験を踏まえ、下記の提供をお約束します。
@@ -662,119 +662,125 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mx-auto max-w-5xl py-12 space-y-8">
+            <div className="mx-auto max-w-5xl py-12 space-y-16">
               {/* 特徴1 */}
-              <Card className="border-none shadow-lg bg-white">
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white text-xl font-bold mr-4">
-                      1
-                    </div>
-                    <div className="flex items-center">
-                      <Handshake className="h-8 w-8 text-primary mr-3" />
-                      <h3 className="text-2xl font-bold">共創と伴走（コラボレーションとサポート）</h3>
-                    </div>
-                  </div>
-                  <div className="ml-16">
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>共創型アプローチ: クライアントと共に作り上げる姿勢。</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>伴走パートナー: クライアントの目標達成に向けて共に走る関係。</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>コラボレーティブ・ワーク: 協力的な作業。</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>共に汗をかく: クライアントの「蒸気」を「原動力」に変える、実践型支援。</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>寄り添い、共に試行錯誤する: 不確実な状況を共に乗り越える。</span>
-                      </li>
-                    </ul>
-                  </div>
+              <div className="relative">
+                <div className="absolute left-0 top-0 -mt-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white text-2xl font-bold shadow-lg">
+                  01
                 </div>
-              </Card>
+                <div className="ml-8 pl-12 border-l-2 border-primary/20">
+                  <Card className="border-none shadow-lg">
+                    <CardHeader className="pb-2">
+                      <div className="flex items-center">
+                        <Handshake className="h-8 w-8 text-primary mr-3" />
+                        <CardTitle className="text-2xl">共創と伴走（コラボレーションとサポート）</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2">
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>共創型アプローチ: クライアントと共に作り上げる姿勢。</span>
+                        </li>
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>伴走パートナー: クライアントの目標達成に向けて共に走る関係。</span>
+                        </li>
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>コラボレーティブ・ワーク: 協力的な作業。</span>
+                        </li>
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>共に汗をかく: クライアントの「蒸気」を「原動力」に変える、実践型支援。</span>
+                        </li>
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>寄り添い、共に試行錯誤する: 不確実な状況を共に乗り越える。</span>
+                        </li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
 
               {/* 特徴2 */}
-              <Card className="border-none shadow-lg bg-white">
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white text-xl font-bold mr-4">
-                      2
-                    </div>
-                    <div className="flex items-center">
-                      <Rocket className="h-8 w-8 text-primary mr-3" />
-                      <h3 className="text-2xl font-bold">未来とイノベーション（創造と革新）</h3>
-                    </div>
-                  </div>
-                  <div className="ml-16">
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>未来志向: 新しい未来を築くことへのフォーカス。</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>イノベーション推進: 革新を進めるサポート。</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>不確実性こそチャンス: 蒸気のように湧き上がるアイデアを事業へ。</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>御社の蒸気のような潜在力を開花: 潜在力を引き出し、未来を創り上げる。</span>
-                      </li>
-                    </ul>
-                  </div>
+              <div className="relative">
+                <div className="absolute left-0 top-0 -mt-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white text-2xl font-bold shadow-lg">
+                  02
                 </div>
-              </Card>
+                <div className="ml-8 pl-12 border-l-2 border-primary/20">
+                  <Card className="border-none shadow-lg">
+                    <CardHeader className="pb-2">
+                      <div className="flex items-center">
+                        <Rocket className="h-8 w-8 text-primary mr-3" />
+                        <CardTitle className="text-2xl">未来とイノベーション（創造と革新）</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2">
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>未来志向: 新しい未来を築くことへのフォーカス。</span>
+                        </li>
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>イノベーション推進: 革新を進めるサポート。</span>
+                        </li>
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>不確実性こそチャンス: 蒸気のように湧き上がるアイデアを事業へ。</span>
+                        </li>
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>御社の蒸気のような潜在力を開花: 潜在力を引き出し、未来を創り上げる。</span>
+                        </li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
 
               {/* 特徴3 */}
-              <Card className="border-none shadow-lg bg-white">
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white text-xl font-bold mr-4">
-                      3
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="h-8 w-8 text-primary mr-3" />
-                      <h3 className="text-2xl font-bold">実践と信頼（具体性と結果重視）</h3>
-                    </div>
-                  </div>
-                  <div className="ml-16">
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>柔軟対応: 不確実な状況に柔軟に適応。</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>ハンズオン支援: 実際に手を動かす具体的サポート。</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>問題解決志向: 課題解決に注力。</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>アジャイルメンタリング: 柔軟なプロジェクト進行サポート。</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>不確実性を受け入れ、共に成長する: 新規事業開発のプロフェッショナル。</span>
-                      </li>
-                    </ul>
-                  </div>
+              <div className="relative">
+                <div className="absolute left-0 top-0 -mt-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white text-2xl font-bold shadow-lg">
+                  03
                 </div>
-              </Card>
+                <div className="ml-8 pl-12 border-l-2 border-primary/20">
+                  <Card className="border-none shadow-lg">
+                    <CardHeader className="pb-2">
+                      <div className="flex items-center">
+                        <CheckCircle className="h-8 w-8 text-primary mr-3" />
+                        <CardTitle className="text-2xl">実践と信頼（具体性と結果重視）</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2">
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>柔軟対応: 不確実な状況に柔軟に適応。</span>
+                        </li>
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>ハンズオン支援: 実際に手を動かす具体的サポート。</span>
+                        </li>
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>問題解決志向: 課題解決に注力。</span>
+                        </li>
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>アジャイルメンタリング: 柔軟なプロジェクト進行サポート。</span>
+                        </li>
+                        <li className="flex items-start">
+                          <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>不確実性を受け入れ、共に成長する: 新規事業開発のプロフェッショナル。</span>
+                        </li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             </div>
             <div className="mt-8 text-center">
               <Link href="#contact">
@@ -793,7 +799,9 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">サービス詳細</h2>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
+                  サービス詳細
+                </h2>
                 <div className="h-1 w-20 bg-primary mx-auto mt-2 mb-6"></div>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   H&M Consultingは、新規事業開発に特化した個人コンサルティング支援です。
@@ -850,7 +858,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">過去の実績</h2>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">過去の実績</h2>
                 <div className="h-1 w-20 bg-primary mx-auto mt-2 mb-6"></div>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   私は多くの企業の新規事業開発を支援してきました。その一部をご紹介します。
@@ -941,7 +949,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">代表紹介</h2>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">代表紹介</h2>
                 <div className="h-1 w-20 bg-primary mx-auto mt-2 mb-6"></div>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   新規事業開発の経験豊富なプロフェッショナルが、貴社の挑戦をサポートします。
@@ -953,13 +961,13 @@ export default function Home() {
               <Card className="transform transition-all duration-500 hover:shadow-lg">
                 <div className="md:flex">
                   <div className="md:w-1/4 p-6 flex justify-center">
-                    <div className="relative h-64 w-64 rounded-lg overflow-hidden">
+                    <div className="relative w-48 h-48 rounded-lg overflow-hidden">
                       <Image
-                        src="/placeholder.svg?height=256&width=256"
-                        width={256}
+                        src="/placeholder.svg?height=256&width=192"
+                        width={192}
                         height={256}
                         alt="代表"
-                        className="object-cover"
+                        className="object-cover w-full h-full"
                       />
                     </div>
                   </div>
@@ -1004,7 +1012,9 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">外部顧問・パートナー</h2>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
+                  外部顧問・パートナー
+                </h2>
                 <div className="h-1 w-20 bg-primary mx-auto mt-2 mb-6"></div>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   各分野の専門家が、貴社の新規事業を強力にサポートします。
@@ -1034,17 +1044,19 @@ export default function Home() {
                       <CardHeader>
                         <Image
                           src={advisor.image || "/placeholder.svg"}
-                          width={150}
-                          height={150}
+                          width={192}
+                          height={192}
                           alt={advisor.name}
-                          className="rounded-lg object-cover w-full h-32"
+                          className="rounded-lg object-cover w-48 h-48 mx-auto"
                         />
                       </CardHeader>
-                      <CardContent>
-                        <CardTitle className="mb-2">{advisor.name}</CardTitle>
-                        <CardDescription className="text-sm text-gray-500">{advisor.position}</CardDescription>
+                      <CardContent className="px-4 pb-3">
+                        <CardTitle className="mb-2 text-base text-center">{advisor.name}</CardTitle>
+                        <CardDescription className="text-sm text-gray-500 leading-relaxed text-center line-clamp-2">
+                          {advisor.position}
+                        </CardDescription>
                       </CardContent>
-                      <CardFooter className="flex flex-col space-y-2">
+                      <CardFooter className="flex flex-col space-y-2 px-4 pb-4">
                         <Popover>
                           <PopoverTrigger asChild>
                             <Button variant="link" className="text-primary text-sm flex items-center p-0">
@@ -1133,50 +1145,99 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">協業・連携をお考えの企業様へ</h2>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
+                  協業・連携のご相談
+                </h2>
                 <div className="h-1 w-20 bg-primary mx-auto mt-2 mb-6"></div>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  H&M Consultingでは、共に成長を目指せる企業様との協業・連携を積極的に進めています。
+                  新規事業開発に関わる様々な専門家との協業・連携を歓迎しています。
                 </p>
               </div>
             </div>
 
-            <div className="mx-auto max-w-5xl py-12">
-              <Card className="transform transition-all duration-500 hover:shadow-lg">
-                <div className="p-6">
-                  <CardHeader className="p-0 mb-6">
-                    <CardTitle className="text-3xl">協業・連携のメリット</CardTitle>
+            <div className="mx-auto max-w-4xl py-12">
+              <div className="grid gap-6 md:grid-cols-2 lg:gap-12">
+                <Card className="transform transition-all duration-500 hover:scale-105 hover:shadow-lg bg-white">
+                  <CardHeader>
+                    <CardTitle className="text-xl">専門家との協業</CardTitle>
                   </CardHeader>
-                  <CardContent className="p-0">
-                    <div className="space-y-4">
-                      <p className="text-gray-600 leading-relaxed">
-                        H&M Consultingとの協業・連携により、貴社は以下のメリットを享受できます。
-                      </p>
-                      <ul className="list-disc pl-5 text-gray-600 leading-relaxed">
-                        <li>新規事業開発の加速</li>
-                        <li>顧客基盤の拡大</li>
-                        <li>専門知識・ノウハウの共有</li>
-                        <li>ブランド力の向上</li>
-                        <li>新たな収益源の創出</li>
-                      </ul>
-                      <p className="text-gray-600 leading-relaxed">
-                        特に、新規事業開発においては、H&M
-                        Consultingの豊富な経験と実績が、貴社の事業成功に大きく貢献します。
-                      </p>
-                    </div>
+                  <CardContent>
+                    <p className="text-gray-500 mb-4">
+                      新規事業開発に関わる様々な専門家との協業を歓迎しています。以下のような方々とのコラボレーションを通じて、クライアントにより良いサービスを提供したいと考えています。
+                    </p>
+                    <ul className="space-y-2">
+                      <li className="flex items-start">
+                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>フリーランスコンサルタント</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>エンジニア・開発者</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>デザイナー（UX/UIデザイン）</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>プロジェクトマネージャー</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>マーケティング専門家</span>
+                      </li>
+                    </ul>
                   </CardContent>
-                </div>
-              </Card>
-            </div>
-            <div className="mt-8 text-center">
-              <Link href="#contact">
-                <Button
-                  variant="outline"
-                  className="rounded-full border-primary text-primary hover:bg-primary hover:text-white"
-                >
-                  お問い合わせ（無料）
-                </Button>
-              </Link>
+                </Card>
+
+                <Card className="transform transition-all duration-500 hover:scale-105 hover:shadow-lg bg-white">
+                  <CardHeader>
+                    <CardTitle className="text-xl">連携のメリット</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-500 mb-4">私との連携により、以下のようなメリットがあります。</p>
+                    <ul className="space-y-2">
+                      <li className="flex items-start">
+                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>大手企業の新規事業開発案件への参画機会</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>専門性を活かした柔軟な働き方</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>多様な専門家とのネットワーク構築</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>新規事業開発のノウハウ・経験の蓄積</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRight className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>安定した案件紹介と報酬</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="mt-12 text-center">
+                <p className="text-gray-500 mb-6">
+                  新規事業開発に関わる専門家として、私と一緒に働きませんか？
+                  <br />
+                  ご興味のある方は、ぜひお問い合わせください。
+                </p>
+                <Link href="#contact">
+                  <Button
+                    variant="outline"
+                    className="rounded-full border-primary text-primary hover:bg-primary hover:text-white"
+                  >
+                    協業・連携のお問い合わせ
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -1185,47 +1246,130 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">お問い合わせ</h2>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
+                  お気軽にご相談ください
+                </h2>
                 <div className="h-1 w-20 bg-primary mx-auto mt-2 mb-6"></div>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  新規事業に関するご相談、協業のご提案など、お気軽にお問い合わせください。
+                  新規事業開発に関するご相談、サービスに関するお問い合わせなど、お気軽にご連絡ください。
                 </p>
               </div>
             </div>
 
-            <div className="mx-auto max-w-3xl">
-              <Card className="border-none shadow-lg">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">お問い合わせフォーム</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <form className="grid gap-4">
-                    <div className="grid gap-2">
-                      <Label htmlFor="name">お名前</Label>
-                      <input type="text" id="name" placeholder="山田 太郎" className="border rounded-md px-3 py-2" />
+            <div className="mx-auto max-w-3xl space-y-4 py-12">
+              <form className="grid gap-6">
+                <div className="grid gap-3">
+                  <label htmlFor="company" className="text-sm font-medium leading-none flex items-center">
+                    会社名 <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    id="company"
+                    type="text"
+                    className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                    placeholder="株式会社〇〇"
+                    required
+                  />
+                </div>
+                <div className="grid gap-3">
+                  <label htmlFor="department" className="text-sm font-medium leading-none flex items-center">
+                    部署名 <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    id="department"
+                    type="text"
+                    className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                    placeholder="新規事業開発部"
+                    required
+                  />
+                </div>
+                <div className="grid gap-3">
+                  <label htmlFor="position" className="text-sm font-medium leading-none flex items-center">
+                    役職 <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    id="position"
+                    type="text"
+                    className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                    placeholder="部長"
+                    required
+                  />
+                </div>
+                <div className="grid gap-3">
+                  <label htmlFor="name" className="text-sm font-medium leading-none flex items-center">
+                    お名前 <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                    placeholder="山田 太郎"
+                    required
+                  />
+                </div>
+                <div className="grid gap-3">
+                  <label htmlFor="email" className="text-sm font-medium leading-none flex items-center">
+                    メールアドレス <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                    placeholder="example@example.com"
+                    required
+                  />
+                </div>
+                <div className="grid gap-3">
+                  <label htmlFor="phone" className="text-sm font-medium leading-none flex items-center">
+                    電話番号 <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                    placeholder="03-1234-5678"
+                    required
+                  />
+                </div>
+                <div className="grid gap-3">
+                  <label className="text-sm font-medium leading-none flex items-center">
+                    お問い合わせ種別 <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <RadioGroup defaultValue="service" required>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="service" id="service" />
+                      <Label htmlFor="service">サービスに関するお問い合わせ</Label>
                     </div>
-                    <div className="grid gap-2">
-                      <Label htmlFor="email">メールアドレス</Label>
-                      <input
-                        type="email"
-                        id="email"
-                        placeholder="taro.yamada@example.com"
-                        className="border rounded-md px-3 py-2"
-                      />
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="collaboration" id="collaboration" />
+                      <Label htmlFor="collaboration">協業・連携に関するお問い合わせ</Label>
                     </div>
-                    <div className="grid gap-2">
-                      <Label htmlFor="message">お問い合わせ内容</Label>
-                      <textarea
-                        id="message"
-                        rows={4}
-                        placeholder="ご質問やご相談内容をご記入ください"
-                        className="border rounded-md px-3 py-2"
-                      />
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="other" id="other" />
+                      <Label htmlFor="other">その他のお問い合わせ</Label>
                     </div>
-                    <Button className="rounded-full">送信</Button>
-                  </form>
-                </CardContent>
-              </Card>
+                  </RadioGroup>
+                </div>
+                <div className="grid gap-3">
+                  <label htmlFor="inquiry" className="text-sm font-medium leading-none flex items-center">
+                    お問い合わせ内容 <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <textarea
+                    id="inquiry"
+                    className="min-h-[150px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                    placeholder="お問い合わせ内容をご記入ください"
+                    required
+                  ></textarea>
+                </div>
+                <div className="flex justify-center">
+                  <Button
+                    type="submit"
+                    variant="outline"
+                    className="rounded-full border-primary text-primary hover:bg-primary hover:text-white px-12"
+                  >
+                    送信する
+                  </Button>
+                </div>
+              </form>
             </div>
           </div>
         </section>
